@@ -56,3 +56,6 @@
 
     sudo route
 
+### check ip address added in interface
+
+    sudo ip addr
