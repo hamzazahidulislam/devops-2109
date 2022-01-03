@@ -51,3 +51,8 @@
 ### IP packet filter rules
 
     sudo iptables -t nat -L
+
+### Route Table 
+
+    sudo route
+
