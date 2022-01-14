@@ -52,10 +52,90 @@
 
     sudo iptables -t nat -L
 
-### Route Table 
+### Route Table
 
     sudo route
 
 ### check ip address added in interface
 
     sudo ip addr
+
+### display the status of TCP and UDP endpoints in table format
+
+    netstat -nltp
+
+### allows for port scanning and port listening
+
+    netcat -l -p 8000
+
+### Telnet utility allows users to test connectivity to remote machines
+
+    telnet localhost 8000
+
+### K8s replicaController watch mode
+
+    kubectl get rc -w
+
+### K8s get services
+
+    kubectl get svc
+
+### K8s delete pod
+
+    kubectl delete pod name1 name2
+
+### get k8s running pod environment variable
+
+    kubectl exec -it <pod_name> -- env
+
+### get k8s running pod show labels
+
+    kubectl get pods --show-labels
+    kubectl get pods --show-labels -o wide
+    kubectl get all | grep <selector_name>
+
+### get k8s services description and replicaController
+
+    kubectl describe svc <service_name>
+    kubectl get rc
+
+### delete k8s replicaController
+
+    kubectl delete rc <replicaController_name>
+
+### access running k8s pod inside a container
+
+    kubectl exec -i -t my-pod --container main-app -- /bin/bash
+
+### remove k8s running pod labels
+
+    kubectl label pod <pod_name> <label_key>-
+
+### k8s get namespace
+
+    kubectl get ns
+    kubectl get pods -n kube-system
+
+### get k8s volumes
+
+    kubectl get pv
+    kubectl get pvc
+    kubectl get storageclass
+    kubectl describe storageclass
+
+### encoded base64 base
+
+    echo -n "hello" | base64
+
+## Reference
+
+- Overview of kubectl
+
+  - https://kubernetes.io/docs/reference/kubectl/overview/
+
+- Get environment variable from kubernetes pod?
+
+  - https://stackoverflow.com/questions/59198188/get-environment-variable-from-kubernetes-pod
+
+- Get a Shell to a Running Container
+  - https://kubernetes.io/docs/tasks/debug-application-cluster/get-shell-running-container/
