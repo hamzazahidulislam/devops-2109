@@ -127,6 +127,10 @@
 
     echo -n "hello" | base64
 
+### check kubernetes cluster configuration
+
+    kubectl config current-context
+
 ## Reference
 
 - Overview of kubectl
