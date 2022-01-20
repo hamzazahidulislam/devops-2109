@@ -131,6 +131,10 @@
 
     kubectl config current-context
 
+### change kubernetes namespaces
+
+    kubectl config use-context microk8s
+
 ## Reference
 
 - Overview of kubectl
