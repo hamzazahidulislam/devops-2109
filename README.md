@@ -135,6 +135,15 @@
 
     kubectl config use-context microk8s
 
+### create namespace in k8s cluster
+
+```
+kubectl config set-context testing \
+ --namespace testing \
+ --cluster docker-desktop \
+ --user docker-desktop
+```
+
 ## Reference
 
 - Overview of kubectl
