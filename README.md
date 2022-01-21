@@ -156,5 +156,3 @@ kubectl config set-context testing \
 
 - Get a Shell to a Running Container
   - https://kubernetes.io/docs/tasks/debug-application-cluster/get-shell-running-container/
-
-<!-- . -->
