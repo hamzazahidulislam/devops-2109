@@ -144,6 +144,10 @@ kubectl config set-context testing \
  --user docker-desktop
 ```
 
+### check the yaml configuration
+
+    kubectl apply -f replica.yml --dry-run=client
+
 ## Reference
 
 - Overview of kubectl
