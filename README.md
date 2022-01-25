@@ -148,6 +148,10 @@ kubectl config set-context testing \
 
     kubectl apply -f replica.yml --dry-run=client
 
+### when you forgot the yaml configuration
+
+    kubectl explain rc --recursive | less
+
 ## Reference
 
 - Overview of kubectl
