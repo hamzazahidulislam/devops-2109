@@ -152,6 +152,11 @@ kubectl config set-context testing \
 
     kubectl explain rc --recursive | less
 
+### how to delete bulk resources
+
+    kubectl delete pods --all
+    kubectl delete rc --all
+
 ## Reference
 
 - Overview of kubectl
