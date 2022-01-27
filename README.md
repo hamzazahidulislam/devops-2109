@@ -162,7 +162,11 @@ kubectl config set-context testing \
     kubectl rollout status deployment nginx-deployment
     kubectl rollout history deployments nginx-deployment
     kubectl apply -f nginx-deployment.yaml ;watch "kubectl get rs -o wide"
-    kubectl apply -f nginx-deployment.yaml ; watch "kubectl get all -o wide"
+    kubectl apply -f nginx-deployment.yaml ;watch "kubectl get all -o wide"
+
+### get k8s deployment
+
+    kubectl get deployments nginx-deployment -o yaml
 
 ## Reference
 
