@@ -161,6 +161,7 @@ kubectl config set-context testing \
 
     kubectl rollout status deployment nginx-deployment
     kubectl apply -f nginx-deployment.yaml ;watch "kubectl get rs -o wide"
+    kubectl apply -f nginx-deployment.yaml ; watch "kubectl get all -o wide"
 
 ## Reference
 
