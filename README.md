@@ -157,6 +157,11 @@ kubectl config set-context testing \
     kubectl delete pods --all
     kubectl delete rc --all
 
+### track your k8s deployement rollout status
+
+    kubectl rollout status deployment nginx-deployment
+    kubectl apply -f nginx-deployment.yaml ;watch "kubectl get rs -o wide"
+
 ## Reference
 
 - Overview of kubectl
