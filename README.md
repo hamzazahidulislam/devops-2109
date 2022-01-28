@@ -180,6 +180,10 @@ kubectl config set-context testing \
     kubectl get deploy -o wide
     kubectl get deployments nginx-deployment -o yaml
 
+### check docker container use resources
+
+    docker container stats d638e2778ea0
+
 ## Reference
 
 - Overview of kubectl
