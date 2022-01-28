@@ -144,6 +144,15 @@ kubectl config set-context testing \
  --user docker-desktop
 ```
 
+### create namespace
+
+    kubectl create ns test
+
+### run pod with specified namespace
+
+    kubectl apply -f firstpod.yml --namespace test
+    kubectl get pods -n test
+
 ### check the yaml configuration
 
     kubectl apply -f replica.yml --dry-run=client
@@ -183,6 +192,11 @@ kubectl config set-context testing \
 ### check docker container use resources
 
     docker container stats d638e2778ea0
+
+### k8s resources list
+
+     kubectl api-resources | less
+     kubectl api-resources | grep -i pod
 
 ## Reference
 
