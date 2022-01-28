@@ -114,6 +114,7 @@
 ### k8s get namespace
 
     kubectl get ns
+    kubectl get pods --all-namespaces
     kubectl get pods -n kube-system
 
 ### get k8s volumes
@@ -197,6 +198,10 @@ kubectl config set-context testing \
 
      kubectl api-resources | less
      kubectl api-resources | grep -i pod
+
+### delete pod with specified namespace
+
+    kubectl delete -f firstpod.yml -n test
 
 ## Reference
 
