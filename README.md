@@ -144,7 +144,10 @@ kubectl config set-context testing \
  --namespace testing \
  --cluster docker-desktop \
  --user docker-desktop
+
 ```
+
+     kubectl config set-context --current --namespace=test
 
 ### create namespace
 
