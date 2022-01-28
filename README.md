@@ -131,6 +131,7 @@
 ### check kubernetes cluster configuration
 
     kubectl config current-context
+    kubectl cluster-info
 
 ### change kubernetes namespaces
 
@@ -202,6 +203,10 @@ kubectl config set-context testing \
 ### delete pod with specified namespace
 
     kubectl delete -f firstpod.yml -n test
+
+### get k8s kube-public value
+
+    curl -k https://192.168.214.130:6443/api/v1/namespaces/kube-public/configmaps/cluster-info
 
 ## Reference
 
