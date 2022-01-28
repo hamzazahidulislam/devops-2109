@@ -211,6 +211,11 @@ kubectl config set-context testing \
 
     curl -k https://192.168.214.130:6443/api/v1/namespaces/kube-public/configmaps/cluster-info
 
+### get resources access to namespace
+
+    curl myfirstservice.mynamespace.svc.cluster.local:8080
+    curl myfirstservice.mynamespace.svc.cluster.local
+
 ## Reference
 
 - Overview of kubectl
