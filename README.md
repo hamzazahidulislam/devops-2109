@@ -151,6 +151,7 @@ kubectl config set-context testing \
 ### when you forgot the yaml configuration
 
     kubectl explain rc --recursive | less
+    kubectl explain pod --recursive | less
 
 ### how to delete bulk resources
 
