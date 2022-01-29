@@ -1,0 +1,40 @@
+# @format
+
+version: '3.8'
+services:
+  main:
+    container_name: main_node
+    image: ubuntu:latest
+    restart: always
+    networks:
+      - gaurav
+    volumes:
+      - main-data:/var/lib/data
+  # worker01:
+  #   container_name: worker01_node
+  #   image: ubuntu
+  #   restart: always
+  #   volumes:
+  #     - worker01-data:/var/lib/data
+  #   networks:
+  #     - gaurav
+  # worker02:
+  #   container_name: worker02_node
+  #   image: ubuntu
+  #   restart: always
+  #   volumes:
+  #     - worker02-data:/var/lib/data
+  #   networks:
+  #     - gaurav
+
+networks:
+  gaurav:
+    driver: bridge
+
+volumes:
+  main-data:
+    driver: local
+  # worker01-data:
+  #   driver: local
+  # worker02-data:
+  #   driver: local

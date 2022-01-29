@@ -1,0 +1,17 @@
+# @format
+apiVersion: v1
+kind: Pod
+metadata:
+  name: firstrpod
+  labels:
+    appname: voatingapp
+
+spec:
+  containers:
+    - name: firstcontainer
+      image: coolgourav147/nginx-custom
+      imagePullPolicy: Never
+      resources:
+        requests:
+          cpu: '100m'
+          memory: '100Mi'

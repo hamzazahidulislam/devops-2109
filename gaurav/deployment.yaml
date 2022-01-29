@@ -1,0 +1,29 @@
+# @format
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  annotations:
+    kubernetes.io/change-cause: 'Deployment config change-cause'
+spec:
+  selector:
+    matchLabels:
+      app: nginx
+  replicas: 2 # tells deployment to run 2 pods matching the template
+  minReadySeconds: 5 # tells deployment to wait for 5 seconds before it starts
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1 # tells deployment to only run 1 pod at a time
+      maxSurge: 1 # tells deployment to only run 1 pod at a time
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:1.14.2
+          ports:
+            - containerPort: 80

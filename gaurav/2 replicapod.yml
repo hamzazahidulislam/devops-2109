@@ -1,0 +1,18 @@
+# @format
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: firstreplicapod
+  labels:
+    appname: voatingapp
+
+spec:
+  replicas: 5
+  template:
+    metadata:
+      labels:
+        appname: voatingapp
+    spec:
+      containers:
+        - name: firstcontainer
+          image: coolgourav147/nginx-custom
