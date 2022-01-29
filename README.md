@@ -233,6 +233,20 @@ kubectl config set-context testing \
 
     kubectl get limits -n myns
 
+### k8s get configmap
+
+    kubectl get cm
+    kubectl get cm -o wide
+    kubectl get cm cm1 -o yaml
+
+### create configmap
+
+    kubectl create cm cm1 --from-literal=key="value"
+
+### describe configmap
+
+    kubectl describe cm cm1
+
 ## Reference
 
 - Overview of kubectl
