@@ -220,6 +220,7 @@ kubectl config set-context testing \
 ### how to define Object base ResourceQuota in namespace
 
     kubectl create quota my-quota --hard=pods=10
+    kubectl get quota -n myns
     kubectl delete quota my-quota
     kubetcl apply -f resourcequota.yml --namespace=myns
     kubectl delete quota resourcequota --namespace=myns
