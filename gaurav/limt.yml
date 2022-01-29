@@ -9,3 +9,4 @@ spec:
     - default:
         cpu: '200m'
         memory: '500m'
+      type: 'Container'
