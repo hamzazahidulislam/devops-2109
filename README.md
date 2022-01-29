@@ -98,6 +98,7 @@
 
     kubectl describe svc <service_name>
     kubectl get rc
+    kubectl describe ns myns
 
 ### delete k8s replicaController
 
