@@ -1,0 +1,8 @@
+# @format
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: resourcequota
+spec:
+  hard:
+    pods: 2
