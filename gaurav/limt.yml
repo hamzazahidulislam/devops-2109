@@ -1,0 +1,11 @@
+# @format
+apiVersion: v1
+kind: LimitRange
+metadata:
+  name: gaurav-limit
+  namespace: myns
+spec:
+  limits:
+    - default:
+        cpu: '200m'
+        memory: '500m'
