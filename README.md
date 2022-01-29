@@ -154,6 +154,10 @@ kubectl config set-context testing \
 
     kubectl create ns test
 
+### describe namespace
+
+    kubectl describe ns myns -n myns
+
 ### run pod with specified namespace
 
     kubectl apply -f firstpod.yml --namespace test
