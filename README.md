@@ -217,7 +217,7 @@ kubectl config set-context testing \
     curl myfirstservice.mynamespace.svc.cluster.local:8080
     curl myfirstservice.mynamespace.svc.cluster.local
 
-### how to define ResourceQuota in namespace
+### how to define Object base ResourceQuota in namespace
 
     kubectl create quota my-quota --hard=pods=10
     kubectl delete quota my-quota
