@@ -229,6 +229,10 @@ kubectl config set-context testing \
     kubetcl apply -f resourcequota.yml --namespace=myns
     kubectl delete quota resourcequota --namespace=myns
 
+### k8s check limits
+
+    kubectl get limits -n myns
+
 ## Reference
 
 - Overview of kubectl
